@@ -1,16 +1,13 @@
 <div ng-controller="CardCtrl">
-  <ul>
-    <li>
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-           <div class="front">
-             {{card.front}}
-           </div>
-           <div class="back">
-             {{card.back}}
-           </div>
-        </div>
-      </div>
-    </li>
-  </ul>
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+       <div class="front">
+         {{card.front}}
+       </div>
+       <div class="back">
+         {{card.back}}
+       </div>
+    </div>
+  </div>
+  <a ui-sref="card({ deckId: deck.id, cardId: (card.id + 1)})">Next card</a>
 </div>

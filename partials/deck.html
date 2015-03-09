@@ -1,5 +1,6 @@
 <div ng-controller="DeckCtrl">
   <h3>{{deck.name}}</h3>
+  <a ui-sref="card({ deckId: deck.id, cardId: 1 })">Practice {{deck.name}}</a>
   <ul>
     <div ng-repeat="item in deck.cards">
       <li><div class="flip-container" ontouchstart="this.classList.toggle('hover');">
