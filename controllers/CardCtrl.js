@@ -1,5 +1,4 @@
-techVocab.controller('CardCtrl', ['$scope', '$state', 'LinkFactory',
-function LinkCtrl($scope, $state, CardFactory){
-  $scope.cards = CardFactory.cards;
+techVocab.controller('CardCtrl', ['$scope', 'CardFactory',
+function CardCtrl($scope, CardFactory){
   $scope.CardFactory = CardFactory;
 }]);
