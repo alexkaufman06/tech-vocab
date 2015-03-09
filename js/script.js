@@ -1,1 +1,1 @@
-document.querySelector("#myCard").classList.toggle("flip")
+// document.querySelector("#myCard").classList.toggle("flip")
