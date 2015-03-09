@@ -1,9 +1,8 @@
-
 <div ng-controller="DeckCtrl">
   <h3>{{deck.name}}</h3>
   <ul>
     <div ng-repeat="item in deck.cards">
-      <li><div id="myCard" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <li><div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	          <div class="flipper">
 		           <div class="front">
 			           {{item.front}}

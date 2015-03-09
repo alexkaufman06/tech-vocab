@@ -9,9 +9,4 @@ techVocab.controller('DeckCtrl', [
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
 
 
-
-    $scope.alex = "banana";
-    console.log($scope.alex);
-    console.log($scope.deck);
-
 }]);

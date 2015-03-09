@@ -11,9 +11,11 @@ li {
 	}
 
 .flip-container, .front, .back {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
   background-color: yellow;
+  text-align: center;
+  padding: 3px;
 }
 
 /* flip speed goes here */
