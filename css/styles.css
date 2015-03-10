@@ -10,10 +10,28 @@ li {
 		transform: rotateY(180deg);
 	}
 
-.flip-container, .front, .back {
+.front {
 	width: 150px;
 	height: 150px;
   background-color: yellow;
+  text-align: center;
+  padding: 3px;
+  color: #000;
+}
+
+.back {
+	width: 150px;
+	height: 150px;
+  background-color: green;
+  text-align: center;
+  padding: 3px;
+  color: #000;
+}
+
+.flip-container {
+	width: 152px;
+	height: 152px;
+  background-color: white;
   text-align: center;
   padding: 3px;
 }
