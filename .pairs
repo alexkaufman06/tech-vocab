@@ -1,19 +1,11 @@
 pairs:
   gf: Gabe Finch
-<<<<<<< HEAD
   amj: Amy Michelle Johnson
-=======
   bp: Ben Pritchard
->>>>>>> card-view
   ak: Alex Kaufman
-  bp: Ben Pritchard
+
 email_addresses:
   gf: gabefinch@gmail.com
-<<<<<<< HEAD
   amj: amyjohnsonmichelle@gmail.com
-  ak:
-  bp:
-=======
   bp: ben.s.pritchard@gmail.com
   ak: alexkaufman06@gmail.com
->>>>>>> card-view
