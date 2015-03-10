@@ -41,12 +41,14 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
+            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li> -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Decks<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu" ng-repeat="item in decks">
-                <li><a href="#">{{item.name}}</a></li>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Decks<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <div ng-repeat="item in decks">
+                  <li><a ui-sref="deck({deckId:item.id})">{{item.name}}</a></li>
+                </div>
               </ul>
             </li>
           </ul>
