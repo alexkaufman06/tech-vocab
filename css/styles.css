@@ -68,3 +68,7 @@ li {
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
 }
+
+.deckName {
+  margin-top: 0px;
+}
