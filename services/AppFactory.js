@@ -39,6 +39,8 @@ techVocab.factory("AppFactory", function AppFactory() {
       ]
     }
   ];
-
+  factory.addCard = function(deck, front, back) {
+    deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
+  };
   return factory;
 });
