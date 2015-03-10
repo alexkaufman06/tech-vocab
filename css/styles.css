@@ -6,33 +6,33 @@ li {
 	perspective: 1000;
 }
 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	.flipped {
 		transform: rotateY(180deg);
 	}
 
 .front {
-	width: 150px;
-	height: 150px;
-  background-color: yellow;
-  text-align: center;
-  padding: 3px;
+	width: 374px;
+	height: 223px;
+  background-image: url("img/notecard.jpg");
+  padding: 85px;
   color: #000;
 }
 
 .back {
-	width: 150px;
-	height: 150px;
-  background-color: green;
+	width: 374px;
+	height: 223px;
   text-align: center;
-  padding: 3px;
+  background-color: #FDEDA6;
+  padding: 10px;
   color: #000;
 }
 
 .flip-container {
-	width: 152px;
-	height: 152px;
+	width: 374px;
+	height: 223px;
   background-color: white;
   text-align: center;
+  font-size: 200%;
   padding: 3px;
 }
 
@@ -47,8 +47,7 @@ li {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
-	position: absolute;
+  position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -65,10 +64,13 @@ li {
 	transform: rotateY(180deg);
 }
 
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
-	transform: rotateY(180deg);
-}
-
 .deckName {
   margin-top: 0px;
+}
+
+.cardheader {
+  color: blue;
+  font-size: 50%;
+  padding: 0px; !important
+
 }

@@ -1,10 +1,13 @@
 <div ng-controller="CardCtrl">
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-    <div class="flipper">
+  <div class="flip-container">
+    <div class="flipper" onclick="this.classList.toggle('flipped')">
        <div class="front">
          {{card.front}}
        </div>
        <div class="back">
+         <div class="cardheader">
+           {{card.front}}
+         </div>
          {{card.back}}
        </div>
     </div>
