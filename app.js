@@ -1,4 +1,4 @@
-var techVocab = angular.module('techVocab', ['ui.router']);
+var techVocab = angular.module('techVocab', ['ui.router', 'firebase']);
 
 techVocab.config(function($stateProvider) {
 
