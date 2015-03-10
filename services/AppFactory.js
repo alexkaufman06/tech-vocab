@@ -1,5 +1,10 @@
-techVocab.factory("AppFactory", function AppFactory() {
+techVocab.factory("AppFactory", ['$firebaseObject', function AppFactory($firebaseObject) {
   var factory = {};
+
+  var ref = new Firebase("https://epicodusflashcards.firebaseio.com/cards");
+  var syncObject = $firebaseObject(ref);
+  factory.cards = syncObject;
+
 
   factory.decks = [
     { name: "Ruby Methods", id:1,
@@ -43,4 +48,4 @@ techVocab.factory("AppFactory", function AppFactory() {
     deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
   };
   return factory;
-});
+}]);
