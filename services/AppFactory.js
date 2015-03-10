@@ -42,5 +42,10 @@ techVocab.factory("AppFactory", function AppFactory() {
   factory.addCard = function(deck, front, back) {
     deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
   };
+  factory.addDeck = function() {
+    var newDeck = {name: "New Deck", id: factory.decks.length + 1, cards: []};
+    factory.decks.push(newDeck);
+    return newDeck;
+  }
   return factory;
 });
