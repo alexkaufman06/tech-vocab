@@ -3,7 +3,6 @@ techVocab.controller('NavbarCtrl', function NavbarCtrl ($scope, $state, AppFacto
   $scope.decks = AppFactory.decks;
   $scope.createDeck = function() {
     var newDeck = AppFactory.addDeck();
-    debugger;
     $state.go('deck', {deckId: newDeck.id});
   };
 });
