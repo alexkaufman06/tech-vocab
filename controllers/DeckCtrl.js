@@ -9,4 +9,5 @@ techVocab.controller('DeckCtrl', [
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
 
 
-}]);
+  }
+]);
