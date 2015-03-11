@@ -29,7 +29,31 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
           back: "removes the first element of the array and returns it", id:10, difficulty:0 }
       ]
     },
-    { name:"Spanish", id:2,
+    { name:"JavaScript", id:2,
+        cards: [
+          {front: "parseFloat()",
+            back: "Parses a string and returns a floating point number", id:1, difficulty:0 },
+          {front: "parseInt()",
+            back: "Parses a string and returns an integer", id:2, difficulty:0 },
+          {front: "toExponential()",
+            back: "Converts a number to exponential notation", id:3, difficulty:0 },
+          {front: "concat()",
+            back: "Combines the text of two or more strings and returns a new string", id:4, difficulty:0 },
+          {front: "alert()",
+            back: "Opens a dialog box and returns undefined", id:5, difficulty:0 },
+          {front: "confrim()",
+            back: "Opens a dialog box and returns a boolean", id:6, difficulty:0 },
+          {front: "prompt()",
+            back: "Opens a dialog box and returns a string", id:7, difficulty:0 },
+          {front: "charAt()",
+            back: "Returns the specified character from a string", id:8, difficulty:0 },
+          {front: "join()",
+            back: "Joins all elements of an array into a string", id:9, difficulty:0 },
+          {front: "pop()",
+            back: "Removes the last element from an array and returns that element", id:10, difficulty:0 }
+        ]
+      },
+    { name:"Spanish", id:3,
         cards: [
           {front: "Hola",
             back: "Hello", id:1, difficulty:0 },
