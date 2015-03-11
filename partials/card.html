@@ -13,7 +13,8 @@
        </div>
     </div>
   </div>
-  <a ng-show="card.id < deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: (card.id + 1)})">Next card</a>
+  <!-- <span ng-click="nextCard()">click</span> -->
+  <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
   <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
   <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Keep Practicing</a>
 
