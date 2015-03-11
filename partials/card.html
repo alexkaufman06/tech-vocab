@@ -18,7 +18,7 @@
   <div class="center">
     <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
     <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
-    <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Keep Practicing</a>
+    <a ng-show="card.id === deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: 1 })">Keep Practicing</a>
 
     <h4>Would you like to change the difficulty rating? Currently: {{card.difficulty}}</h4>
     <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
