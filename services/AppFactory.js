@@ -30,17 +30,29 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
       ]
     },
     { name:"Spanish", id:2,
-      cards: [
-        {front: "Hola",
-          back: "Hello", id:1},
-        {front: "Adios",
-          back: "Goodbye", id:2},
-        {front: "Comida",
-          back: "Food", id:3},
-        {front: "Almuerza",
-          back: "Lunch", id:4}
-      ]
-    }
+        cards: [
+          {front: "Hola",
+            back: "Hello", id:1, difficulty:0 },
+          {front: "Adios",
+            back: "Goodbye", id:2, difficulty:0 },
+          {front: "Comida",
+            back: "Food", id:3, difficulty:0 },
+          {front: "Almuerza",
+            back: "Lunch", id:4, difficulty:0 },
+          {front: "Los zapatos",
+            back: "Shoes", id:5, difficulty:0 },
+          {front: "La ardilla",
+            back: "Squirrel", id:6, difficulty:0 },
+          {front: "La cama",
+            back: "The bed", id:7, difficulty:0 },
+          {front: "La almohada",
+            back: "The pillow", id:8, difficulty:0 },
+          {front: "La pintura",
+            back: "Painting", id:9, difficulty:0 },
+          {front: "La panaderia",
+            back: "Bakery", id:10, difficulty:0 }
+        ]
+      }
   ];
   factory.addCard = function(deck, front, back) {
     deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
