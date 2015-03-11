@@ -11,3 +11,4 @@ techVocab.controller('CardCtrl', [
     $scope.card = UtilityFactory.findById($scope.deck.cards, $stateParams.cardId);
 
 }]);
+ it
