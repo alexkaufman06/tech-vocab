@@ -13,7 +13,5 @@ techVocab.controller('DeckCtrl', [
       $scope.newFront = "";
       $scope.newBack = "";
     };
-
-
   }
 ]);
