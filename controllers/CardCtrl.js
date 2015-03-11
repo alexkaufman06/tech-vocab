@@ -14,11 +14,9 @@ techVocab.controller('CardCtrl', [
       $state.go('card', { cardId: ($scope.card.id + 1) });
     }
 
-    // $scope.handleKeyEvent = function(event) {
-    //   console.log('handling it!')
-    //   if (event.which === 78) {
-    //     // var nextCardState = card({ deckId: $scope.deck.id, cardId: ($scope.card.id + 1)})
-    //     $scope.nextCard();
-    //   }
-    // }
+    $scope.handleKeyEvent = function(event) {
+      if (event.which === 78) {
+        $scope.nextCard();
+      }
+    }
 }]);
