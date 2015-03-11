@@ -13,14 +13,16 @@
        </div>
     </div>
   </div>
+
   <!-- <span ng-click="nextCard()">click</span> -->
-  <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
-  <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
-  <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Keep Practicing</a>
+  <div class="center">
+    <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
+    <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
+    <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Keep Practicing</a>
 
-  <h4>Would you like to change the difficulty rating? Currently: {{card.difficulty}}</h4>
-  <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
-  <button class="btn btn-warning" ng-click="UtilityFactory.assignMedium(card)">Medium</button>
-  <button class="btn btn-danger" ng-click="UtilityFactory.assignHard(card)">Hard</button>
-
+    <h4>Would you like to change the difficulty rating? Currently: {{card.difficulty}}</h4>
+    <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
+    <button class="btn btn-warning" ng-click="UtilityFactory.assignMedium(card)">Medium</button>
+    <button class="btn btn-danger" ng-click="UtilityFactory.assignHard(card)">Hard</button>
+  </div>
 </div>

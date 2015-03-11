@@ -8,10 +8,17 @@ hr {
   margin: 1em 0; padding: 0;
 }
 
-.flip-container {
-	perspective: 1000;
+.center {
+  text-align: center;
 }
-	/* flip the pane when hovered */
+
+.flip-container {
+	/*perspective: 1000;*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+	/* flip the pane when clicked */
 	.flipped {
 		transform: rotateY(180deg);
 	}
@@ -31,6 +38,7 @@ hr {
   background-color: #FDEDA6;
   padding: 10px;
   color: #000;
+  position: absolute;
 }
 
 .flip-container {
@@ -46,14 +54,13 @@ hr {
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-  position: absolute;
+  /*position: absolute;*/
 	top: 0;
 	left: 0;
 }
