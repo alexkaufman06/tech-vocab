@@ -2,6 +2,12 @@ li {
   list-style: none;
 }
 
+hr {
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid #000;
+  margin: 1em 0; padding: 0;
+}
+
 .flip-container {
 	perspective: 1000;
 }
@@ -71,6 +77,4 @@ li {
 .cardheader {
   color: blue;
   font-size: 50%;
-  padding: 0px; !important
-
 }
