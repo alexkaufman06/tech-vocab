@@ -1,6 +1,6 @@
 <div ng-controller="CardCtrl">
   <div class="flip-container">
-    <div class="flipper" onclick="this.classList.toggle('flipped')">
+    <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip()">
        <div class="front">
          {{card.front}}
        </div>
