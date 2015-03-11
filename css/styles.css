@@ -20,7 +20,7 @@ hr {
 .front {
 	width: 374px;
 	height: 223px;
-  background-image: url("img/notecard.jpg");
+  background-image: url("img/indexcard.png");
   padding: 85px;
   color: #000;
 }
@@ -102,7 +102,7 @@ hr {
 	}
 /* flip speed goes here */
 .flipcard {
-	transition: 0.6s;
+	transition: 2s;
 	transform-style: preserve-3d;
 
 	position: relative;
@@ -122,7 +122,7 @@ hr {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateX(0deg);
-  background-image: url("img/notecard.jpg");
+  background-image: url("img/indexcard.png");
   background-size: 100% 100%;
 }
 
@@ -130,6 +130,7 @@ hr {
 .rear {
 	transform: rotateX(180deg);
   background-color: #FDEDA6;
+
 }
 
 .homecard {
@@ -137,14 +138,16 @@ hr {
   font-family: 'Fredericka the Great', cursive;
   font-size: 460%;
 }
+
 .cardpieces {
   padding-left: 0px;
   padding-right: 0px;
 }
-.rotate {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+
+.card-container {
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
   }
   @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
   @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
