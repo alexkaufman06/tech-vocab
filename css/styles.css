@@ -18,10 +18,11 @@ hr {
   margin-left:auto;
   margin-right:auto;
 }
-	/* flip the pane when clicked */
-	.flipped {
-		transform: rotateY(180deg);
-	}
+
+/* flip the pane when clicked */
+.flipped {
+	transform: rotateY(180deg);
+}
 
 .front {
 	width: 374px;
@@ -49,6 +50,10 @@ hr {
   font-size: 200%;
   padding: 3px;
 }
+
+
+
+
 
 /* flip speed goes here */
 .flipper {
@@ -84,4 +89,62 @@ hr {
 .cardheader {
   color: grey;
   font-size: 50%;
+}
+
+/*For a big flash card on about page*/
+.flip-container-about {
+  /*perspective: 1000;*/
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top: 30px;
+}
+
+.front-about {
+  width: 500px;
+  height: 300px;
+  background-image: url("img/notecard.jpg");
+  background-size: 100%;
+  padding: 25px;
+  color: #000;
+}
+
+.back-about {
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  background-color: #FDEDA6;
+  padding: 70px;
+  color: #000;
+  position: absolute;
+}
+
+.flip-container-about {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  font-size: 200%;
+  padding: 3px;
+}
+
+
+/* hide back of pane during swap */
+.front-about, .back-about {
+  backface-visibility: hidden;
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front-about {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back-about {
+  transform: rotateY(180deg);
 }
