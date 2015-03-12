@@ -4,8 +4,10 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
   // var sync = $firebaseArray(ref);
   // factory.decks = sync;
 
+  factory.counter = 4 // the counter starts with the first non hard-coded id number
+
   factory.decks = [
-    { name: "Ruby Methods", id:1,
+    { name: "Ruby Methods", id:1, cardCounter: 11,
       cards: [
         {front: "string.chop()",
           back: "removes the last character", id:1, difficulty:0 },
@@ -29,7 +31,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
           back: "removes the first element of the array and returns it", id:10, difficulty:0 }
       ]
     },
-    { name:"JavaScript", id:2,
+    { name:"JavaScript", id:2, cardCounter: 11,
         cards: [
           {front: "parseFloat()",
             back: "Parses a string and returns a floating point number", id:1, difficulty:0 },
@@ -53,7 +55,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
             back: "Removes the last element from an array and returns that element", id:10, difficulty:0 }
         ]
       },
-    { name:"Spanish", id:3,
+    { name:"Spanish", id:3, cardCounter: 11,
         cards: [
           {front: "Hola",
             back: "Hello", id:1, difficulty:0 },
@@ -115,9 +117,10 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
         }
   ];
   factory.addCard = function(deck, front, back) {
-    deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
+    deck.cards.push({front: front, back: back, id: deck.cardCounter});
+    deck.cardCounter += 1;
   };
-  factory.deleteCard = function(card,deck) {
+  factory.deleteCard = function(card, deck) {
     var index = deck.cards.indexOf(card);
     deck.cards.splice(index, 1);
     // deck.cards.forEach(carte) {
@@ -126,10 +129,14 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
     // }
   };
   factory.addDeck = function() {
-    var newDeck = {name: "New Deck", id: factory.decks.length + 1, cards: []};
+    var newDeck = {name: "New Deck", id: factory.counter, cardCounter: 1, cards: []};
+    factory.counter += 1;
     factory.decks.push(newDeck);
     // factory.decks.$loaded();
     return newDeck;
+  }
+  factory.deleteDeck = function() {
+    return "hello";
   }
   return factory;
 });
