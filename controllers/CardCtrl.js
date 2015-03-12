@@ -52,11 +52,14 @@ techVocab.controller('CardCtrl', [
     $('body').off();
     angular.element(window).off();
     angular.element(window).on('keydown', function(key) {
-      if (key.keyCode === 49) {
+      console.log(key);
+      if (key.keyCode === 48 || key.keycode === 96) {
+        $scope.nextCard();
+      } else if (key.keyCode === 49 || key.keycode === 97) {
         $scope.easyCard();
-      } else if (key.keyCode === 50) {
+      } else if (key.keyCode === 50 || key.keycode === 98) {
         $scope.mediumCard();
-      } else if (key.keyCode === 51) {
+      } else if (key.keyCode === 51 || key.keycode === 99) {
         $scope.hardCard();
       } else if (key.keyCode === 32) {
         angular.element('.flipper').trigger('click');
