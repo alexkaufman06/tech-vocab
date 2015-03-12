@@ -11,7 +11,7 @@
     </div>
 
     <div class="flip-container col-xs-6">
-      <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip()">
+      <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip();">
          <div class="front">
            {{card.front}}
          </div>
@@ -31,15 +31,15 @@
   <div class="center">
 
     <div class="btn-group" role="group" aria-label="...">
-      <button class="btn btn-info" ng-click="">Flip (spacebar)</button>
-      <button class="btn btn-default" ng-click="">Pass</button>
+      <button class="btn btn-info" onclick="$('.flipper').toggleClass('flipped'); clicksound.playclip();">Flip (spacebar)</button>
+      <button class="btn btn-default" ng-click="nextCard">Pass</button>
     </div>
 
     <h4>Difficulty{{card.difficulty}}</h4>
     <div class="btn-group" role="group" aria-label="...">
-      <button class="btn btn-success" ng-click="">Easy 1</button>
-      <button class="btn btn-warning" ng-click="">Medium 2</button>
-      <button class="btn btn-danger" ng-click="">Hard 3</button>
+      <button class="btn btn-default" ng-click="easyCard()">Easy (1)</button>
+      <button class="btn btn-default" ng-click="mediumCard()">Med. (2)</button>
+      <button class="btn btn-default" ng-click="hardCard()">Hard (3)</button>
     </div>
     <h5>
       <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>

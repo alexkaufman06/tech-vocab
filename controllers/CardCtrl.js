@@ -33,6 +33,16 @@ techVocab.controller('CardCtrl', [
       $state.go('card', { cardId: (pickCard.id) });
     }
 
+    $scope.easyCard = function() {
+
+    };
+    $scope.mediumCard = function() {
+
+    };
+    $scope.difficultCard = function() {
+
+    };
+
     $scope.handleKeyEvent = function(event) {
       if (event.which === 78) {
         $scope.nextCard();
