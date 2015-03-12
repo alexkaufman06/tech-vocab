@@ -49,12 +49,8 @@ techVocab.controller('CardCtrl', [
       $scope.card.chance = $scope.card.chance * 2;
       $scope.cardPicker();
     };
-
-    $scope.handleKeyEvent = function(event) {
-      if (event.which === 78) {
-        $scope.nextCard();
-      }
-    }
+    $('body').off();
+    angular.element(window).off();
     angular.element(window).on('keydown', function(key) {
       if (key.keyCode === 49) {
         $scope.easyCard();
@@ -63,7 +59,7 @@ techVocab.controller('CardCtrl', [
       } else if (key.keyCode === 51) {
         $scope.hardCard();
       } else if (key.keyCode === 32) {
-        $('.flipper').toggleClass('flipped'); clicksound.playclip();;
+        angular.element('.flipper').trigger('click');
       }
     });
 }]);
