@@ -53,6 +53,7 @@ techVocab.controller('CardCtrl', [
     angular.element(window).off();
     angular.element(window).on('keydown', function(key) {
       console.log(key);
+      debugger;
       if (key.keyCode === 48 || key.keycode === 96) {
         $scope.nextCard();
       } else if (key.keyCode === 49 || key.keycode === 97) {
