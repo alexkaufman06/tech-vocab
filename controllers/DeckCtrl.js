@@ -6,7 +6,7 @@ techVocab.controller('DeckCtrl', [
   'AppFactory',
   function DeckCtrl($scope, $state, $stateParams, UtilityFactory, AppFactory){
 
-
+    $scope.deleteCard = AppFactory.deleteCard;
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
     $scope.createCard = function () {
       AppFactory.addCard($scope.deck, $scope.newFront, $scope.newBack);
