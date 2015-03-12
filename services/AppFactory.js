@@ -100,7 +100,8 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
     return newDeck;
   }
   factory.deleteDeck = function() {
-    return "hello";
+    var index = factory.decks.indexOf(deck);
+    factory.decks.splice(index, 1);
   }
   return factory;
 });
