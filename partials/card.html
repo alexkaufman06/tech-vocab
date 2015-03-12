@@ -20,11 +20,13 @@
     <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
     <a ng-show="card.id === deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: 1 })">Keep Practicing</a>
 
-    <h4>Would you like to change the difficulty rating? Currently: {{card.difficulty}}</h4>
-    <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
-    <button class="btn btn-warning" ng-click="UtilityFactory.assignMedium(card)">Medium</button>
-    <button class="btn btn-danger" ng-click="UtilityFactory.assignHard(card)">Hard</button>
+    <h4>Difficulty{{card.difficulty}}</h4>
+    <div class="btn-group" role="group" aria-label="...">
+      <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
+      <button class="btn btn-warning" ng-click="UtilityFactory.assignMedium(card)">Medium</button>
+      <button class="btn btn-danger" ng-click="UtilityFactory.assignHard(card)">Hard</button>
+    </div>
   </div>
 
-  <input ng-keydown="handleKeyEvent($event)" type="text" placeholder="fake input">
+  <!-- <input ng-keydown="handleKeyEvent($event)" type="text" placeholder="fake input"> -->
 </div>
