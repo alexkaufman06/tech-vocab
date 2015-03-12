@@ -9,6 +9,14 @@ hr {
   margin: 1px 0; padding: 0;
 }
 
+.main-header {
+  font-size: 50px;
+}
+
+.sub-header {
+  font-size: 20px;
+}
+
 .center {
   text-align: center;
 }
