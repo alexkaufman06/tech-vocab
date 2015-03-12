@@ -1,10 +1,10 @@
-techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
+techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
   factory = {};
   // var ref = new Firebase("https://epicodusflashcards.firebaseio.com");
   // var sync = $firebaseArray(ref);
   // factory.decks = sync;
 
-  factory.counter = 4 // the counter starts with the first non hard-coded id number
+  factory.counter = 5 // the counter starts with the first non hard-coded id number
 
   factory.decks = [
     { name: "Ruby Methods", id:1, cardCounter: 11,
@@ -139,10 +139,11 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
     factory.decks.push(newDeck);
     // factory.decks.$loaded();
     return newDeck;
-  }
-  factory.deleteDeck = function() {
+  };
+  factory.deleteDeck = function(deck) {
     var index = factory.decks.indexOf(deck);
     factory.decks.splice(index, 1);
+    $state.go("home");
   }
   return factory;
 });
