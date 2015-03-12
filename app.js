@@ -7,6 +7,11 @@ techVocab.config(function($stateProvider) {
     templateUrl: "partials/home.html"
   });
 
+  $stateProvider.state('about', {
+    url: "/about",
+    templateUrl: "partials/about.html"
+  });
+
   $stateProvider.state('deck', {
     url: "/deck/:deckId",
     templateUrl: "partials/deck.html"
@@ -16,4 +21,5 @@ techVocab.config(function($stateProvider) {
     url: "/deck/:deckId/card/:cardId",
     templateUrl: "partials/card.html"
   });
+
 });
