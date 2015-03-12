@@ -43,7 +43,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
             back: "Combines the text of two or more strings and returns a new string", id:4, difficulty:0 },
           {front: "alert()",
             back: "Opens a dialog box and returns undefined", id:5, difficulty:0 },
-          {front: "confrim()",
+          {front: "confirm()",
             back: "Opens a dialog box and returns a boolean", id:6, difficulty:0 },
           {front: "prompt()",
             back: "Opens a dialog box and returns a string", id:7, difficulty:0 },
@@ -116,6 +116,11 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
           ]
         }
   ];
+  factory.decks.forEach( function(deck) {
+    deck.cards.forEach( function(card) {
+      card.chance = 1;
+    });
+  });
   factory.addCard = function(deck, front, back) {
     deck.cards.push({front: front, back: back, id: deck.cardCounter});
     deck.cardCounter += 1;

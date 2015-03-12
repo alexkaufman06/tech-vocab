@@ -1,31 +1,51 @@
 <div ng-controller="CardCtrl">
-  <div class="flip-container">
-    <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip()">
-       <div class="front">
-         {{card.front}}
-       </div>
-       <div class="back">
-         <div class="cardheader">
+  <div class="row">
+    <div class="col-xs-3">
+      <button ng-click"" class="btn btn-default">
+        {{deck.name}}
+        <span class="badge">
+          {{deck.cards.length}}
+        </span>
+      </button>
+      <h6 class="well">Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
+    </div>
+
+    <div class="flip-container col-xs-6">
+      <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip()">
+         <div class="front">
            {{card.front}}
-           <hr>
          </div>
-         {{card.back}}
-       </div>
+         <div class="back">
+           <div class="cardheader">
+             {{card.front}}
+             <hr>
+           </div>
+           {{card.back}}
+         </div>
+      </div>
+    </div>
+    <div class="col-xs-3">
     </div>
   </div>
-
-  <!-- <span ng-click="nextCard()">click</span> -->
+  <br>
   <div class="center">
-    <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
-    <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
-    <a ng-show="card.id === deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: 1 })">Keep Practicing</a>
+
+    <div class="btn-group" role="group" aria-label="...">
+      <button class="btn btn-info" ng-click="">Flip (spacebar)</button>
+      <button class="btn btn-default" ng-click="">Pass</button>
+    </div>
 
     <h4>Difficulty{{card.difficulty}}</h4>
     <div class="btn-group" role="group" aria-label="...">
-      <button class="btn btn-success" ng-click="UtilityFactory.assignEasy(card)">Easy</button>
-      <button class="btn btn-warning" ng-click="UtilityFactory.assignMedium(card)">Medium</button>
-      <button class="btn btn-danger" ng-click="UtilityFactory.assignHard(card)">Hard</button>
+      <button class="btn btn-success" ng-click="">Easy 1</button>
+      <button class="btn btn-warning" ng-click="">Medium 2</button>
+      <button class="btn btn-danger" ng-click="">Hard 3</button>
     </div>
+    <h5>
+      <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
+      <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
+      <a ng-show="card.id === deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: 1 })">Keep Practicing</a>
+    </h5>
   </div>
 
   <!-- <input ng-keydown="handleKeyEvent($event)" type="text" placeholder="fake input"> -->
