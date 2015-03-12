@@ -76,7 +76,43 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
           {front: "La panaderia",
             back: "Bakery", id:10, difficulty:0 }
         ]
-      }
+      },
+      { name:"Non-technical Interview Questions", id:4,
+          cards: [
+            {front: "Why did you get into programming?",
+              back: "Try and give a short overview, segway into a problem, and then give a solution!", id:1, difficulty:0 },
+            {front: "What made you pick Epicodus?",
+              back: "Overview, problem, solution.", id:2, difficulty:0 },
+            {front: "Where do you see yourself in the future?",
+              back: "Try and relate your future to your job.", id:3, difficulty:0 },
+            {front: "Tell me about yourself.  What's your background?",
+              back: "Do your best to relate your background to your job of interest.", id:4, difficulty:0 },
+            {front: "What problems do you see with current web development tools?",
+              back: "Overview. Problem. Solution", id:5, difficulty:0 },
+            {front: "What do you like about current web development trends?",
+              back: "Relate to trends your job of interest uses", id:6, difficulty:0 },
+            {front: "Do you write JavaScript or rely more on libraries like jQuery?",
+              back: "Try and show how you are capable of both?", id:7, difficulty:0 },
+            {front: "What frameworks have you used?",
+              back: "Ember, Angular...", id:8, difficulty:0 },
+            {front: "What testing tools have you used?",
+              back: "Rspec, Mocha", id:9, difficulty:0 },
+            {front: "Are you familiar with HAML/SASS/Markdown?",
+              back: "HAML- lightweight markup language SASS- a CSS extension Markdown- text to HTML conversion tool", id:10, difficulty:0 },
+            {front: "Why do you want to work here?",
+              back: "Overview. Problem. Solution.", id:11, difficulty:0 },
+            {front: "What questions do you have for me?",
+              back: "Ask about their practices, tools and culture - have three or so questions ready for them.", id:12, difficulty:0 },
+            {front: "What kind of culture do you want in your workspace?",
+              back: "Try and link this to what you know about their culture and what you want.", id:13, difficulty:0 },
+            {front: "What are some of the challenges you faced while pairing?",
+              back: "Overview. Problem. Solution.", id:14, difficulty:0 },
+            {front: "Give an example of how you resolved a disagreement with your pair.",
+              back: "Overview. Problem. Soltuion.", id:15, difficulty:0 },
+            {front: "Tell me about the intern project you worked on.",
+              back: "Try and relate your story to the project of interest.", id:16, difficulty:0 }
+          ]
+        }
   ];
   factory.addCard = function(deck, front, back) {
     deck.cards.push({front: front, back: back, id: deck.cards.length + 1});
