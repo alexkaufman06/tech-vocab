@@ -84,6 +84,10 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray) {
   factory.deleteCard = function(card,deck) {
     var index = deck.cards.indexOf(card);
     deck.cards.splice(index, 1);
+    // deck.cards.forEach(carte) {
+    //   var place = deck.cards.indexOf(carte);
+    //   carte.id = place + 1;
+    // }
   };
   factory.addDeck = function() {
     var newDeck = {name: "New Deck", id: factory.decks.length + 1, cards: []};

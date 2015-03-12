@@ -20,7 +20,8 @@
         <th>#</th>
         <th>Front</th>
         <th>Back</th>
-        <!-- <th>Column heading</th> -->
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +36,7 @@
           <td ng-show="isEditing"><input type="text" ng-model="item.front" class="form-control input-sm"></td>
           <td ng-show="isEditing"><input type="text" ng-model="item.back" class="form-control input-sm"></td>
           <td ng-show="isEditing"><button ng-click="isEditing = false" class="btn btn-success">Save</button></td>
-          <td><button ng-click="deleteCard(item,deck)" class="btn btn-danger">Delete</button></td>
+          <td><button ng-click="deleteCard(item,deck)" class="btn btn-danger btn-xs">Delete!</button></td>
       </tr>
       <tr>
         <td>{{deck.cards.length + 1}}</td>
