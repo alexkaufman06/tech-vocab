@@ -38,19 +38,18 @@
     <nav class="navbar navbar-inverse" ng-controller="NavbarCtrl">
       <div class="container-fluid">
         <div class="navbar-header">
-
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">FlashCards</a>
+          <a class="navbar-brand main-header" href="#">FlashCards</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Decks<span class="caret"></span></a>
+              <a class="dropdown-toggle sub-header" data-toggle="dropdown" role="button" aria-expanded="false">Decks<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li ng-repeat="item in decks" ui-sref="deck({deckId:item.id})"><a ui-sref="deck({deckId:item.id})">{{item.name}} <span class="badge">{{item.cards.length}}</span></a></li>
                 <li class="divider"></li>
@@ -58,7 +57,7 @@
               </ul>
             </li>
             <li>
-              <a class="dropdown-toggle" data-toggle="dropdown" ui-sref="about" role="button" aria-expanded="false">About</a>
+              <a class="dropdown-toggle sub-header" data-toggle="dropdown" ui-sref="about" role="button" aria-expanded="false">About</a>
             </li>
           </ul>
         </div>
