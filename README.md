@@ -18,8 +18,9 @@ None known
 ### Authors:
 Gabe Finch
 Alex Kaufman
-Amy Michelle Johnson
-Ben Pritchard
 Julie Turner
+Silwia Bialczak
+Ben Pritchard
+Amy Michelle Johnson
 #### License
 MIT

@@ -12,6 +12,11 @@ techVocab.config(function($stateProvider) {
     templateUrl: "partials/about.html"
   });
 
+  $stateProvider.state('contact', {
+    url: "/contact",
+    templateUrl: "partials/contact.html"
+  });
+
   $stateProvider.state('deck', {
     url: "/deck/:deckId",
     templateUrl: "partials/deck.html"
