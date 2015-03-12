@@ -1,7 +1,7 @@
 <div ng-controller="CardCtrl">
   <div class="row">
     <div class="col-xs-3">
-      <button ng-click"" class="btn btn-default">
+      <button ui-sref="deck({deckId: deck.id})" class="btn btn-default">
         {{deck.name}}
         <span class="badge">
           {{deck.cards.length}}
@@ -10,9 +10,11 @@
       <div class="statbar well">
         <h6>Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
         <hr>
-        <h6 class="text-success">Easy <span class="badge">{{practicedCards || 5}}</span></h6>
-        <h6 class="text-warning">Medium <span class="badge">{{practicedCards || 5}}</span></h6>
-        <h6 class="text-danger">Difficult <span class="badge">{{practicedCards || 5}}</span></h6>
+        <div class="tough-counts">
+          <h6 class="text-success">Easy <span class="badge">{{0}}</span></h6>
+          <h6 class="text-warning">Medium <span class="badge">{{0}}</span></h6>
+          <h6 class="text-danger">Difficult <span class="badge">{{0}}</span></h6>
+        </div>
       </div>
     </div>
 
@@ -38,7 +40,7 @@
 
     <div class="btn-group" role="group" aria-label="...">
       <button class="btn btn-info" onclick="$('.flipper').toggleClass('flipped'); clicksound.playclip();">Flip (spacebar)</button>
-      <button class="btn btn-default" ng-click="nextCard">Pass</button>
+      <button class="btn btn-default" ng-click="nextCard()">Pass</button>
     </div>
     <br>
     <br>
@@ -47,11 +49,11 @@
       <button class="btn btn-default" ng-click="mediumCard()"><span class="text-warning">Med. (2)</span></button>
       <button class="btn btn-default" ng-click="hardCard()"><span class="text-danger">Hard (3)</span></button>
     </div>
-    <h5>
+    <!-- <h5>
       <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
       <a ng-show="card.id === deck.cards.length" ui-sref="deck({ deckId: deck.id })">Back to Deck</a>
       <a ng-show="card.id === deck.cards.length" ui-sref="card({ deckId: deck.id, cardId: 1 })">Keep Practicing</a>
-    </h5>
+    </h5> -->
   </div>
 
   <!-- <input ng-keydown="handleKeyEvent($event)" type="text" placeholder="fake input"> -->

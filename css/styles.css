@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 li {
   list-style: none;
 }
@@ -19,6 +20,9 @@ hr {
 
 .center {
   text-align: center;
+}
+.tough-counts {
+  text-align: right;
 }
 
 .flip-container {
@@ -73,6 +77,8 @@ hr {
   /*position: absolute;*/
   top: 0;
   left: 0;
+  font-family: 'Source Code Pro';
+  font-weight: 700;
 }
 
 /* front pane, placed above back */

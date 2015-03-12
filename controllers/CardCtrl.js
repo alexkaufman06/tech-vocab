@@ -16,6 +16,7 @@ techVocab.controller('CardCtrl', [
     };
 
     $scope.cardPicker = function() {
+      lastCard = $scope.card;
       var chanceSum = 0;
       $scope.deck.cards.forEach( function(card) {
         card.chanceBottom = chanceSum;
@@ -30,17 +31,23 @@ techVocab.controller('CardCtrl', [
         }
       });
       $scope.practicedCards = 45;
-      $state.go('card', { cardId: (pickCard.id) });
+      if (lastCard === pickCard) {
+         $scope.cardPicker();
+      } else {
+        $state.go('card', { cardId: (pickCard.id) });
+      }
     }
 
     $scope.easyCard = function() {
-
+      $scope.card.chance = $scope.card.chance / 2;
+      $scope.cardPicker();
     };
     $scope.mediumCard = function() {
-
+      $scope.cardPicker();
     };
-    $scope.difficultCard = function() {
-
+    $scope.hardCard = function() {
+      $scope.card.chance = $scope.card.chance * 2;
+      $scope.cardPicker();
     };
 
     $scope.handleKeyEvent = function(event) {
