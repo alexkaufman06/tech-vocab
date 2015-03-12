@@ -7,7 +7,13 @@
           {{deck.cards.length}}
         </span>
       </button>
-      <h6 class="well">Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
+      <div class="statbar well">
+        <h6>Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
+        <hr>
+        <h6 class="text-success">Easy <span class="badge">{{practicedCards || 5}}</span></h6>
+        <h6 class="text-warning">Medium <span class="badge">{{practicedCards || 5}}</span></h6>
+        <h6 class="text-danger">Difficult <span class="badge">{{practicedCards || 5}}</span></h6>
+      </div>
     </div>
 
     <div class="flip-container col-xs-6">
@@ -34,12 +40,12 @@
       <button class="btn btn-info" onclick="$('.flipper').toggleClass('flipped'); clicksound.playclip();">Flip (spacebar)</button>
       <button class="btn btn-default" ng-click="nextCard">Pass</button>
     </div>
-
-    <h4>Difficulty{{card.difficulty}}</h4>
+    <br>
+    <br>
     <div class="btn-group" role="group" aria-label="...">
-      <button class="btn btn-default" ng-click="easyCard()">Easy (1)</button>
-      <button class="btn btn-default" ng-click="mediumCard()">Med. (2)</button>
-      <button class="btn btn-default" ng-click="hardCard()">Hard (3)</button>
+      <button class="btn btn-default" ng-click="easyCard()"><span class="text-success">Easy (1)</span></button>
+      <button class="btn btn-default" ng-click="mediumCard()"><span class="text-warning">Med. (2)</span></button>
+      <button class="btn btn-default" ng-click="hardCard()"><span class="text-danger">Hard (3)</span></button>
     </div>
     <h5>
       <a ng-show="card.id < deck.cards.length" ng-click="nextCard()">Next card</a>
