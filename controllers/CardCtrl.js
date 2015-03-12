@@ -55,4 +55,15 @@ techVocab.controller('CardCtrl', [
         $scope.nextCard();
       }
     }
+    angular.element(window).on('keydown', function(key) {
+      if (key.keyCode === 49) {
+        $scope.easyCard();
+      } else if (key.keyCode === 50) {
+        $scope.mediumCard();
+      } else if (key.keyCode === 51) {
+        $scope.hardCard();
+      } else if (key.keyCode === 32) {
+        $('.flipper').toggleClass('flipped'); clicksound.playclip();;
+      }
+    });
 }]);
