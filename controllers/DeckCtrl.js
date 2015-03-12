@@ -5,7 +5,7 @@ techVocab.controller('DeckCtrl', [
   'UtilityFactory',
   'AppFactory',
   function DeckCtrl($scope, $state, $stateParams, UtilityFactory, AppFactory){
-
+    angular.element(window).off();
     $scope.deleteCard = AppFactory.deleteCard;
     $scope.deleteDeck = AppFactory.deleteDeck;
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
