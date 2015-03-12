@@ -2,10 +2,14 @@
   <div class="row">
     <div class="col-xs-3">
       <button ng-click"" class="btn btn-default">
-        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>{{deck.name}}
+        {{deck.name}}
+        <span class="badge">
+          {{deck.cards.length}}
+        </span>
       </button>
-      <h5>Session: {{practicedCards}} cards</h5>
+      <h6 class="well">Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
     </div>
+
     <div class="flip-container col-xs-6">
       <div class="flipper" onclick="this.classList.toggle('flipped'); clicksound.playclip()">
          <div class="front">

@@ -7,16 +7,15 @@ techVocab.controller('CardCtrl', [
   function CardCtrl($scope, $state, $stateParams, UtilityFactory, AppFactory){
 
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
-    $scope.deck.cards.forEach( function(card) {
-      card.chance = 1;
-    });
-
     $scope.card = UtilityFactory.findById($scope.deck.cards, $stateParams.cardId);
-    $scope.practicedCards = 0;
 
     var totalCards = $scope.deck.cards.length;
 
     $scope.nextCard = function() {
+      $state.go('card', { cardId: ($scope.card.id + 1) });
+    };
+
+    $scope.cardPicker = function() {
       var chanceSum = 0;
       $scope.deck.cards.forEach( function(card) {
         card.chanceBottom = chanceSum;
@@ -30,7 +29,7 @@ techVocab.controller('CardCtrl', [
           pickCard = card;
         }
       });
-      $scope.practicedCards += 1;
+      $scope.practicedCards = 45;
       $state.go('card', { cardId: (pickCard.id) });
     }
 
