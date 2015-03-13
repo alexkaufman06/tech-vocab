@@ -27,6 +27,9 @@ techVocab.controller('DeckCtrl', [
       AppFactory.removeDeck($scope.deck);
       }
     };
+    $scope.startMatch = function(deck) {
+      $state.go('match',{deckId: deck.id});
+    };
 
   }
 ]);

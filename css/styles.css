@@ -66,7 +66,35 @@ hr {
   color: #000;
   position: absolute;
 }
-
+.matchback {
+  text-align: center;
+  font-family: 'Source Code Pro';
+  font-weight: 700;
+  font-size: 100%;
+  width: 187px;
+  height: 111.5px;
+  background-color: #FDEDA6;
+  color: #000;
+  padding: 3px;
+  -webkit-box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+}
+.matchfront {
+  text-align: center;
+  font-family: 'Source Code Pro';
+  font-weight: 700;
+  font-size: 100%;
+  width: 187px;
+  height: 111.5px;
+  background-image: url("img/indexcard.png");
+  background-size: 100%;
+  color: #000;
+  padding: 3px;
+  -webkit-box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 37px -3px rgba(0,0,0,0.75);
+}
 .flip-container {
   width: 374px;
   height: 223px;
