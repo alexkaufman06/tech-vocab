@@ -195,7 +195,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
     });
   });
   factory.addCard = function(deck, front, back) {
-    deck.cards.push({front: front, back: back, id: deck.cardCounter, order: (deck.cards.length + 1) });
+    deck.cards.push({front: front, back: back, id: deck.cardCounter, order: (deck.cards.length + 1), chance: 1, hardness: "" });
     deck.cardCounter += 1;
   };
   factory.removeCard = function(card, deck) {

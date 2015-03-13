@@ -43,7 +43,6 @@ techVocab.controller('CardCtrl', [
     }
 
     $scope.easyCard = function() {
-      debugger;
       $scope.card.hardness = "Easy";
       $scope.card.chance = $scope.card.chance / 2;
       $scope.cardPicker();
