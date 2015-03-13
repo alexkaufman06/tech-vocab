@@ -38,3 +38,5 @@ function createsoundbite(sound){
 
 var mouseoversound=createsoundbite("js/sound/flip.ogg", "js/sound/flip.mp3")
 var clicksound=createsoundbite("js/sound/flip.ogg", "js/sound/flip.ogg")
+var success=createsoundbite("js/sound/sonar.ogg", "js/sound/sonar.ogg")
+var fail=createsoundbite("js/sound/drip.ogg", "js/sound/drip.ogg")

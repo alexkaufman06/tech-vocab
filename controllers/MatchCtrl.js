@@ -2,25 +2,49 @@ techVocab.controller('MatchCtrl', function MatchCtrl(
   $scope, $state, $stateParams, UtilityFactory, AppFactory){
 
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
-    $scope.card = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
 
+    pickedCardNum = Math.ceil(Math.random() * $scope.deck.cards.length);
+    $scope.card = UtilityFactory.findById($scope.deck.cards, pickedCardNum);
 
+    var pickOf3 = Math.ceil(Math.random() * 3);
 
-    var random3 = Math.ceil(Math.random() * 3);
-    if (random3 === 1) {
+    var wrongCardNum1 = function () {
+      var rand = Math.ceil(Math.random() * $scope.deck.cards.length);
+      if (rand === pickedCardNum) {rand -= 1;}
+      return rand;
+    };
+
+    var wrongCardNum2 = function () {
+      var rand = Math.ceil(Math.random() * $scope.deck.cards.length);
+      if (rand === pickedCardNum) {rand += 1;}
+      return rand;
+    };
+
+    var wrongCard1 = UtilityFactory.findById($scope.deck.cards, wrongCardNum1());
+    var wrongCard2 = UtilityFactory.findById($scope.deck.cards, wrongCardNum2());
+
+    if (pickOf3 === 1) {
       $scope.card1 = $scope.card;
-      $scope.card2 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
-      $scope.card3 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
-    } else if (random3 === 2) {
-      $scope.card1 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
+      $scope.card2 = wrongCard1;
+      $scope.card3 = wrongCard2;
+    } else if (pickOf3 === 2) {
+      $scope.card1 = wrongCard1;
       $scope.card2 = $scope.card;
-      $scope.card3 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
-    } else if (random3 === 3) {
-      $scope.card1 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
-      $scope.card2 = UtilityFactory.findById($scope.deck.cards, Math.ceil(Math.random() * $scope.deck.cards.length));
+      $scope.card3 = wrongCard2;
+    } else if (pickOf3 === 3) {
+      $scope.card1 = wrongCard1;
+      $scope.card2 = wrongCard2;
       $scope.card3 = $scope.card;
     }
 
+    $scope.cardGuess = function(num) {
+      if (num === pickOf3) {
+        success.playclip();
+        $state.go('match', { deckId:$scope.deck.id }, {reload:true});
+      } else {
+        fail.playclip();
+      }
+    }
 
 
     // $scope.cardPicker = function() {

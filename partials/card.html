@@ -18,7 +18,9 @@
         <hr>
         <h6>Deck Progress:</h6>
         <div class="progress progress-striped active">
-          <div class="progress-bar" role="progressbar" style="width: {{((deck.cards | filter:{hardness:'Easy'}).length) / (deck.cards.length) * 100 }}%"></div>
+          <div class="progress-bar" role="progressbar"
+            style="width: {{((deck.cards | filter:{hardness:'Easy'}).length) / (deck.cards.length) * 100 }}%">
+          </div>
         </div>
       </div>
     </div>
