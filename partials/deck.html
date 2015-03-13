@@ -3,15 +3,15 @@
     <div>
       <h3 class="deckName">{{deck.name}} <small>{{deck.cards.length}} cards</small></h3>
     </div>
-    <button ng-click="titleEditing=true" class="btn btn-xs"><span class="text-success">Edit Name</span></button>
-    <button ng-click="deleteDeck(item)" class="btn btn-xs"><span class="text-danger">Delete Deck</span></button>
+    <button ng-click="titleEditing=true" class="btn btn-default btn-xs"><span class="text-default">Edit Name</span></button>
+    <button ng-click="deleteDeck(item)" class="btn btn-danger btn-xs"><span class="text-default">Delete Deck</span></button>
   </div>
   <div class="row well" ng-show="titleEditing">
     <h3><input type="text" ng-model="deck.name" class="form-control input-lg"></h3>
     <button class="btn btn-success btn-xs" ng-click="titleEditing = false">Save</button>
-    <button ng-click="deleteDeck(item)" class="btn btn-xs"><span class="text-danger">Delete Deck</span></button>
+    <button ng-click="deleteDeck(item)" class="btn btn-danger btn-xs"><span class="text-default">Delete Deck</span></button>
   </div>
-  <button ng-click="practiceDeck(deck)" class="btn btn-warning">Practice {{deck.name}}</button>
+  <button ng-click="practiceDeck(deck)" class="btn btn-success"><span class="text-default">Practice {{deck.name}}</span></button>
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -28,8 +28,8 @@
           <td ng-show="!isEditing">{{item.front}}</td>
           <td ng-show="!isEditing">{{item.back}}</td>
           <td ng-show="!isEditing">
-            <button ng-click="isEditing = true" class="btn btn-xs">Edit</button>
-            <button ng-click="deleteCard(item, deck)" class="btn btn-xs"><span class="text-danger">Delete</span></button>
+            <button ng-click="isEditing = true" class="btn btn-default btn-xs">Edit</button>
+            <button ng-click="deleteCard(item, deck)" class="btn btn-danger btn-xs"><span class="text-default">Delete</span></button>
           </td>
         <!-- </div> -->
         <!-- <div ng-show="isEditing"> -->
@@ -38,7 +38,7 @@
           <td ng-show="isEditing"><input type="text" ng-model="item.back" class="form-control input-sm"></td>
           <td ng-show="isEditing">
             <button ng-click="isEditing = false" class="btn btn-success btn-xs">Save</button>
-            <button ng-click="deleteCard(item, deck)" class="btn btn-xs"><span class="text-danger">Delete</span></button>
+            <button ng-click="deleteCard(item, deck)" class="btn btn-danger btn-xs"><span class="text-defualt">Delete</span></button>
           </td>
       </tr>
       <tr>
