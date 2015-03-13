@@ -14,5 +14,15 @@ techVocab.controller('DeckCtrl', [
       $scope.newFront = "";
       $scope.newBack = "";
     };
+    $scope.practiceDeck = function(deck) {
+      $state.go('card', {deckId: deck.id, cardId: 1});
+    };
+    $scope.deleteCard = function(card) {
+      AppFactory.removeCard(card, $scope.deck);
+    };
+    $scope.deleteDeck = function() {
+      AppFactory.removeDeck($scope.deck);
+    };
+
   }
 ]);

@@ -11,9 +11,9 @@
         <h6>Practiced <span class="badge">{{practicedCards || 5}}</span></h6>
         <hr>
         <div class="tough-counts">
-          <h6 class="text-success">Easy <span class="badge">{{0}}</span></h6>
-          <h6 class="text-warning">Medium <span class="badge">{{0}}</span></h6>
-          <h6 class="text-danger">Hard <span class="badge">{{0}}</span></h6>
+          <h6 class="text-success">Easy <span class="badge">{{(deck.cards | filter:{hardness:"Easy"}).length}}</span></h6>
+          <h6 class="text-warning">Medium <span class="badge">{{(deck.cards | filter:{hardness:"Medium"}).length}}</span></h6>
+          <h6 class="text-danger">Hard <span class="badge">{{(deck.cards | filter:{hardness:"Hard"}).length}}</span></h6>
         </div>
       </div>
     </div>

@@ -1,20 +1,17 @@
 <div ng-controller="DeckCtrl">
-  <div class="row" ng-show="!titleEditing">
-    <div class="col-sm-6">
-      <h3 class="deckName">{{deck.name}} </h3>
+  <div class="row well" ng-show="!titleEditing">
+    <div>
+      <h3 class="deckName">{{deck.name}} <small>{{deck.cards.length}} cards</small></h3>
     </div>
-    <button class="btn col-sm-1" ng-click="titleEditing=true">Edit</button>
-    <div class="col-sm-2"></div>
-    <button ng-click="deleteDeck(item)" class="btn col-sm-1 btn btn-xs"><span class="text-danger">Delete!</span></button>
+    <button ng-click="titleEditing=true" class="btn btn-xs"><span class="text-success">Edit Name</span></button>
+    <button ng-click="deleteDeck(item)" class="btn btn-xs"><span class="text-danger">Delete Deck</span></button>
   </div>
-  <div class="row" ng-show="titleEditing">
-    <div class="col-sm-6">
-      <input type="text" ng-model="deck.name" class="form-control input-lg">
-    </div>
-    <button class="btn btn-success col-sm-1" ng-click="titleEditing = false">Save</button>
-    <div class="col-sm-5"></div>
+  <div class="row well" ng-show="titleEditing">
+    <h3><input type="text" ng-model="deck.name" class="form-control input-lg"></h3>
+    <button class="btn btn-success btn-xs" ng-click="titleEditing = false">Save</button>
+    <button ng-click="deleteDeck(item)" class="btn btn-xs"><span class="text-danger">Delete Deck</span></button>
   </div>
-  <a ui-sref="card({ deckId: deck.id, cardId: 1 })">Practice {{deck.name}}</a>
+  <button ng-click="practiceDeck(deck)" class="btn btn-warning">Practice {{deck.name}}</button>
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -30,14 +27,19 @@
           <td ng-show="!isEditing">{{item.id}}</td>
           <td ng-show="!isEditing">{{item.front}}</td>
           <td ng-show="!isEditing">{{item.back}}</td>
-          <td ng-show="!isEditing"><button ng-click="isEditing = true" class="btn">Edit</button></td>
+          <td ng-show="!isEditing">
+            <button ng-click="isEditing = true" class="btn btn-xs">Edit</button>
+            <button ng-click="deleteCard(item, deck)" class="btn btn-xs"><span class="text-danger">Delete</span></button>
+          </td>
         <!-- </div> -->
         <!-- <div ng-show="isEditing"> -->
           <td ng-show="isEditing">{{item.id}}</td>
           <td ng-show="isEditing"><input type="text" ng-model="item.front" class="form-control input-sm"></td>
           <td ng-show="isEditing"><input type="text" ng-model="item.back" class="form-control input-sm"></td>
-          <td ng-show="isEditing"><button ng-click="isEditing = false" class="btn btn-success">Save</button></td>
-          <td><button ng-click="deleteCard(item, deck)" class="btn btn-xs"><span class="text-danger">Delete!</span></button></td>
+          <td ng-show="isEditing">
+            <button ng-click="isEditing = false" class="btn btn-success btn-xs">Save</button>
+            <button ng-click="deleteCard(item, deck)" class="btn btn-xs"><span class="text-danger">Delete</span></button>
+          </td>
       </tr>
       <tr>
         <td>{{deck.cards.length + 1}}</td>
