@@ -4,7 +4,7 @@ techVocab.controller('MatchCtrl', function MatchCtrl(
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
 
     pickedCardNum = Math.ceil(Math.random() * $scope.deck.cards.length);
-    $scope.card = UtilityFactory.findById($scope.deck.cards, pickedCardNum);
+    $scope.card = UtilityFactory.findByOrder($scope.deck.cards, pickedCardNum);
 
     var pickOf3 = Math.ceil(Math.random() * 3);
 
@@ -20,8 +20,8 @@ techVocab.controller('MatchCtrl', function MatchCtrl(
       return rand;
     };
 
-    var wrongCard1 = UtilityFactory.findById($scope.deck.cards, wrongCardNum1());
-    var wrongCard2 = UtilityFactory.findById($scope.deck.cards, wrongCardNum2());
+    var wrongCard1 = UtilityFactory.findByOrder($scope.deck.cards, wrongCardNum1());
+    var wrongCard2 = UtilityFactory.findByOrder($scope.deck.cards, wrongCardNum2());
 
     if (pickOf3 === 1) {
       $scope.card1 = $scope.card;
