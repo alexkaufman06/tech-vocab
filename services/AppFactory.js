@@ -83,7 +83,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
       { name:"Non-technical Interview Questions", id:4,
           cards: [
             {front: "Why did you get into programming?",
-              back: "Try and give a short overview, segway into a problem, and then give a solution!", id:1 },
+              back: "Try and give a short overview, segue into a problem, and then give a solution!", id:1 },
             {front: "What made you pick Epicodus?",
               back: "Overview, problem, solution.", id:2 },
             {front: "Where do you see yourself in the future?",
