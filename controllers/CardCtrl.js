@@ -2,12 +2,16 @@ techVocab.controller('CardCtrl', function CardCtrl(
   $scope, $state, $stateParams, UtilityFactory, AppFactory) {
 
     $scope.deck = UtilityFactory.findById(AppFactory.decks, $stateParams.deckId);
-    $scope.card = UtilityFactory.findById($scope.deck.cards, $stateParams.cardId);
+    $scope.card = UtilityFactory.findByOrder($scope.deck.cards, $stateParams.cardOrder);
 
     var totalCards = $scope.deck.cards.length;
 
     $scope.nextCard = function() {
-      $state.go('card', { cardId: ($scope.card.id + 1) });
+      if ($scope.card.order + 1 > totalCards ) {
+        $state.go('card', { cardOrder: 1 });
+      } else {
+        $state.go('card', { cardOrder: ($scope.card.order + 1) });
+      }
     };
 
     $scope.cardPicker = function() {
@@ -29,7 +33,7 @@ techVocab.controller('CardCtrl', function CardCtrl(
       if (lastCard === pickCard) {
          $scope.cardPicker();
       } else {
-        $state.go('card', { cardId: (pickCard.id) });
+        $state.go('card', { cardOrder: (pickCard.order) });
       }
     }
 
