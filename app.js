@@ -23,7 +23,7 @@ techVocab.config(function($stateProvider) {
   });
 
   $stateProvider.state('card', {
-    url: "/deck/:deckId/card/:cardId",
+    url: "/deck/:deckId/card/:cardOrder",
     templateUrl: "partials/card.html"
   });
 
