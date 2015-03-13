@@ -15,7 +15,22 @@
           <h6 class="text-warning">Medium <span class="badge">{{(deck.cards | filter:{hardness:"Medium"}).length}}</span></h6>
           <h6 class="text-danger">Hard <span class="badge">{{(deck.cards | filter:{hardness:"Hard"}).length}}</span></h6>
         </div>
+        <hr>
+        <h6>Deck Progress:</h6>
+        <div class="progress progress-striped active">
+          <div class="progress-bar" role="progressbar" style="width: {{((deck.cards | filter:{hardness:'Easy'}).length) / (deck.cards.length) * 100 }}%"></div>
+        </div>
       </div>
+    </div>
+
+    <div class="col-xs-3 statbar well right">
+      <h6>Controls:</h6>
+      <hr>
+      <h6><span class="text-primary">Flip Card: Click Card or press Spacebar</span></h6>
+      <h6>Skip Card: 0</h6>
+      <h6><span class="text-success">Assign Easy: Press 1</span></h6>
+      <h6><span class="text-warning">Assign Medium: Press 2</span></h6>
+      <h6><span class="text-danger">Assign Hard: Press 3</span></h6>
     </div>
 
     <div class="flip-container col-xs-6 card-view">
@@ -38,8 +53,9 @@
   <br>
   <div class="center">
 
+
     <div class="btn-group" role="group" aria-label="...">
-      <button class="btn btn-info" onclick="$('.flipper').toggleClass('flipped'); clicksound.playclip();">Flip (spacebar)</button>
+      <button class="btn btn-primary" onclick="$('.flipper').toggleClass('flipped'); clicksound.playclip();">Flip (spacebar)</button>
       <button class="btn btn-default" ng-click="nextCard()">Pass (0)</button>
     </div>
     <br>
@@ -50,4 +66,5 @@
       <button class="btn btn-default" ng-click="hardCard()"><span class="text-danger">Hard (3)</span></button>
     </div>
   </div>
+
 </div>

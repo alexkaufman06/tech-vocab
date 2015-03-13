@@ -10,6 +10,11 @@ hr {
   margin: 1px 0; padding: 0;
 }
 
+.right {
+  float: right;
+  margin-top: 40px;
+}
+
 .card-view {
   margin-top: 40px;
   display: block;
