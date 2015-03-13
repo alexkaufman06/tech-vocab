@@ -8,5 +8,12 @@ function UtilityFactory() {
       }
       return null;
     },
+    findByOrder: function(collection, order) {
+      for (var i = 0; i < collection.length; i++) {
+        if (collection[i].order == order)
+          return collection[i];
+      }
+      return null;
+    },
   };
 });
