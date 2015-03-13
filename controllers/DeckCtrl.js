@@ -18,10 +18,14 @@ techVocab.controller('DeckCtrl', [
       $state.go('card', {deckId: deck.id, cardId: 1});
     };
     $scope.deleteCard = function(card) {
-      AppFactory.removeCard(card, $scope.deck);
+      if (confirm("Delete this card from " + $scope.deck.name + " ?")) {
+        AppFactory.removeCard(card, $scope.deck);
+      }
     };
     $scope.deleteDeck = function() {
+      if (confirm("Delete entire " + $scope.deck.name + " deck ?")) {
       AppFactory.removeDeck($scope.deck);
+      }
     };
 
   }

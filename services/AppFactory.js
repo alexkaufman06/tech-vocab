@@ -3,10 +3,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
   // var ref = new Firebase("https://epicodusflashcards.firebaseio.com");
   // var sync = $firebaseArray(ref);
   // factory.decks = sync;
-
-
   factory.counter = 6 // the counter starts with the first non hard-coded id number
-
   factory.decks = [
     { name: "Ruby Methods", id:1, cardCounter: 11,
       cards: [
