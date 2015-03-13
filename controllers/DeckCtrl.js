@@ -15,7 +15,7 @@ techVocab.controller('DeckCtrl', [
       $scope.newBack = "";
     };
     $scope.practiceDeck = function(deck) {
-      $state.go('card', {deckId: deck.id, cardId: 1});
+      $state.go('card', {deckId: deck.id, cardOrder: 1});
     };
     $scope.deleteCard = function(card) {
       if (confirm("Delete this card from " + $scope.deck.name + "?")) {
