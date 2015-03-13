@@ -24,7 +24,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in deck.cards">
-          <td ng-show="!isEditing">{{item.id}}</td>
+          <td ng-show="!isEditing">{{item.order}}</td>
           <td ng-show="!isEditing">{{item.front}}</td>
           <td ng-show="!isEditing">{{item.back}}</td>
           <td ng-show="!isEditing">
@@ -33,7 +33,7 @@
           </td>
         <!-- </div> -->
         <!-- <div ng-show="isEditing"> -->
-          <td ng-show="isEditing">{{item.id}}</td>
+          <td ng-show="isEditing">{{item.order}}</td>
           <td ng-show="isEditing"><input type="text" ng-model="item.front" class="form-control input-sm"></td>
           <td ng-show="isEditing"><input type="text" ng-model="item.back" class="form-control input-sm"></td>
           <td ng-show="isEditing">

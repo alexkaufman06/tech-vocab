@@ -8,25 +8,25 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
     { name: "Ruby Methods", id:1, cardCounter: 11,
       cards: [
         {front: "string.chop()",
-          back: "removes the last character", id:1 },
+          back: "removes the last character", id: 1, order: 1 },
         {front: "string.chomp()",
-          back: "removes blank space and carriage returns from the end", id:2 },
+          back: "removes blank space and carriage returns from the end", id:2, order: 2 },
         {front: "array.join()",
-          back: "concats an array into a string", id:3 },
+          back: "concats an array into a string", id:3, order: 3 },
         {front: "array.reverse()",
-          back: "reverses order of array elements", id:4 },
+          back: "reverses order of array elements", id:4, order: 4 },
         {front: "array.shuffle()",
-          back: "randomizes order of elements", id:5 },
+          back: "randomizes order of elements", id:5, order: 5 },
         {front: "float.ceil()",
-          back: "rounds up to integer", id:6 },
+          back: "rounds up to integer", id:6, order: 6 },
         {front: "array.unshift()",
-          back: "takes an argument and adds it to the beginning of the array", id:7 },
+          back: "takes an argument and adds it to the beginning of the array", id:7, order: 7 },
         {front: "array.pop()",
-          back: "removes the last element of the array and returns it", id:8 },
+          back: "removes the last element of the array and returns it", id:8, order: 8 },
         {front: "array.length()",
-          back: "returns the number of elements in the array", id:9 },
+          back: "returns the number of elements in the array", id:9, order: 9 },
         {front: "array.shift()",
-          back: "removes the first element of the array and returns it", id:10 }
+          back: "removes the first element of the array and returns it", id:10, order: 10 }
       ]
     },
     { name:"JavaScript", id:2, cardCounter: 11,
@@ -77,7 +77,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
             back: "Bakery", id:10 }
         ]
       },
-      { name:"Non-technical Interview Questions", id:4,
+      { name:"Non-technical Interview Questions", id:4, cardCounter: 17,
           cards: [
             {front: "Why did you get into programming?",
               back: "Try and give a short overview, segue into a problem, and then give a solution!", id:1 },
@@ -113,7 +113,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
               back: "Try and relate your story to the project of interest.", id:16 }
           ]
         },
-        { name:"Technical Interview Questions", id:5,
+        { name:"Technical Interview Questions", id:5, cardCounter: 36,
             cards: [
               {front: "What is Rails and why use it?",
                 back: "", id:1 },
@@ -200,7 +200,15 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
   };
   factory.removeCard = function(card, deck) {
     var index = deck.cards.indexOf(card);
-    deck.cards.splice(index, 1);
+    var indexToDelete = index;
+
+    while (deck.cards[index + 1] != null) {
+      deck.cards[index + 1].order -= 1;
+      index += 1;
+    }
+
+    deck.cards.splice(indexToDelete, 1);
+
     // deck.cards.forEach(carte) {
     //   var place = deck.cards.indexOf(carte);
     //   carte.id = place + 1;
