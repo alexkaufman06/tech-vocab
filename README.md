@@ -16,11 +16,11 @@ Open index.html
 None known
 ```
 ### Authors:
-Gabe Finch
-Alex Kaufman
-Julie Turner
-Silwia Bialczak
-Ben Pritchard
-Amy Michelle Johnson
+Gabe Finch  
+Alex Kaufman  
+Julie Turner  
+Silwia Bialczak  
+Ben Pritchard  
+Amy Michelle Johnson  
 #### License
 MIT
