@@ -90,9 +90,9 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
             {front: "What problems do you see with current web development tools?",
               back: "Overview. Problem. Solution", id:5, order: 5 },
             {front: "What do you like about current Web development trends?",
-              back: "Make answer relevant to trends your job of interest uses", id:6, order: 6 },
+              back: "Make answer relevant to trends your job of interest uses.", id:6, order: 6 },
             {front: "Do you write JavaScript or rely more on libraries like jQuery?",
-              back: "Try to show how you are capable of both", id:7, order: 7 },
+              back: "Try to show how you are capable of both.", id:7, order: 7 },
             {front: "What frameworks have you used?",
               back: "Ember, Angular...", id:8, order: 8 },
             {front: "What testing tools have you used?",
@@ -104,13 +104,13 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
             {front: "What questions do you have for me?",
               back: "Ask about their practices, tools and culture - have three or so questions ready for them.", id:12, order: 12 },
             {front: "What kind of culture do you want in your workspace?",
-              back: "Try and link this to what you know about their culture and what you want.", id:13, order: 13 },
+              back: "Try to link this to what you know about their culture and what you want.", id:13, order: 13 },
             {front: "What are some of the challenges you faced while pairing?",
               back: "Overview. Problem. Solution.", id:14, order: 14 },
             {front: "Give an example of how you resolved a disagreement with your pair.",
               back: "Overview. Problem. Soltuion.", id:15, order: 15 },
             {front: "Tell me about the intern project you worked on.",
-              back: "Try and relate your story to the project of interest.", id:16, order: 16 }
+              back: "Try to relate your story to the project of interest.", id:16, order: 16 }
           ]
         },
         { name:"Technical Interview Questions", id:5, cardCounter: 36,
