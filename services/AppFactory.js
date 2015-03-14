@@ -123,7 +123,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
           back: "", id:3, order: 3 },
         { front: "What is a migration?",
           back: "", id:4, order: 4 },
-        { front: "What is a router",
+        { front: "What is a router?",
           back: "", id:5, order: 5 },
         { front: "What is the difference between a POST request and a GET request?",
           back: "", id:6, order: 6 },
