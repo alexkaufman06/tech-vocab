@@ -19,7 +19,7 @@ None known
 Gabe Finch  
 Alex Kaufman  
 Julie Turner  
-Silwia Bialczak  
+[Arsi (Sylwia M. Bialczak)  
 Ben Pritchard  
 Amy Michelle Johnson  
 #### License
