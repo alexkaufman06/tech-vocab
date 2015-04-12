@@ -116,7 +116,8 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
     { name:"Technical Interview Questions", id:5, cardCounter: 36,
       cards: [
         { front: "What is Rails and why use it?",
-          back: "", id:1, order: 1 },
+          back: "Ruby on Rails is a framework that favors convention over configuration.  This allows you to get 
+          something up and running with very little effort.", id:1, order: 1 },
         { front: "Name every database association relationship.",
           back: "", id:2, order: 2 },
         { front: "What is an ORM?",
