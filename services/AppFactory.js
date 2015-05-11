@@ -121,7 +121,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
         { front: "Name every database association relationship.",
           back: "", id:2, order: 2 },
         { front: "What is an ORM?",
-          back: "", id:3, order: 3 },
+          back: "Object-relational mapping, a technique for converting data between incompatible type systems.", id:3, order: 3 },
         { front: "What is a migration?",
           back: "", id:4, order: 4 },
         { front: "What is a router?",
