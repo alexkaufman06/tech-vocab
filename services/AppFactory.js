@@ -3,7 +3,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
   // var ref = new Firebase("https://epicodusflashcards.firebaseio.com");
   // var sync = $firebaseArray(ref);
   // factory.decks = sync;
-  factory.counter = 6 // the counter starts with the first non hard-coded id number
+  factory.counter = 7 // the counter starts with the first non hard-coded id number
   factory.decks = [
     { name: "Ruby Methods", id: 1, cardCounter: 11,
       cards: [
@@ -188,7 +188,7 @@ techVocab.factory("AppFactory", function AppFactory($firebaseArray, $state) {
           back: "", id:35, order: 35 }
       ]
     },
-    { name:"English Vocab", id:6, cardCounter: 20,
+    { name:"English Vocab", id:6, cardCounter: 21,
       cards: [
         { front: "Quintessence",
           back: "The purest and most concentrated essence of something.  The fifth and highest element after air and earth and fire and water.",
